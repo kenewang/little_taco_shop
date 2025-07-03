@@ -1,0 +1,149 @@
+<!DOCTYPE html>  <!--This is a declaration and hence the single "<>"-->
+<!--This is a doctype declaration that should exist in every html page-->
+<html lang="en">
+
+<head>  <!-- "<> </>" this is an element and it has two tags-->
+
+  <!--Everything inside the head element is not seen on the page-->
+  <!--it is just metadata about the page-->
+
+  <meta charset="UTF-8" />
+  <!--Meta tag is just metadata-->
+  <meta name="author" content="Kenewang Oganne" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  <!--title of the page-->
+  <title>Taco Home Page</title>
+  <link rel="icon" href="html5.png" type="image/x-icon" />
+  <!--adding a favicon-->
+  <link rel="stylesheet" href="style_home.css" /> <!--points to a css file "style_home.css"-->
+</head>
+
+<body>
+  
+  
+  <h1>Welcome to Little Taco Shop</h1>
+  <nav class = "mobile-nav">
+    <!--semantic html tag called nav-->
+    <!--Semantic HTML means using HTML tags that clearly describe their meaning and purpose-->
+     <button class="menu-btn" aria-label="Open menu">☰</button>
+     
+    <ul class = "menu">
+      <!--unordered list start tag-->
+      <!-- the "<ul>" tag when it wraps list elements — it indents them a little to the right-->
+      <li>
+        <!--list tag-->
+        <a href="#about">About LTS</a>
+        <!--"<a>" is an anchor tag-->
+        <!--We use anchor tag to create absolute or relative links-->
+      </li>
+      <li><a href="#menu">Our Menu</a></li>
+      <li><a href="hours.html">Store Hours</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <!--the above are relative links because they exist on our server or same directory as website code-->
+    </ul>
+  </nav>
+  <section>
+    <!--another html semantic tag-->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--an html entity for spacing-->
+    <!--html entities start with "&"-->
+    <figure>
+      <!--figure tag is used to group images along with the "figcaption tag"-->
+      <img src="img/tacos_and_drink_400x267.png" alt="image showing tacos and drink" width="370" height="267"
+        loading="lazy" /> <!--image tag does not have a closing tag therefore it is called a void element-->
+      <figcaption>Tacos and a Drink</figcaption>
+    </figure>
+    </section>
+
+    <hr />
+    <section id="about">
+      <h2>About <abbr title="Little Taco Shop">LTS</abbr></h2>
+      <!--abbr is the abbreviation tag-->
+      <p>
+        <u>LTS</u> was founded in 2022. Our shop was built from a
+        <strong>love of tacos.</strong>We hope our shop adds a unique and
+        interesting place to our little town.
+        <!--<u> is the tag to underline-->
+          <!--Strong tag is just to bold a text-->
+      </p>
+    </section>
+
+    <section id="taco_trivia">
+      <details>
+        <!-- It's like a built-in toggle box for showing and hiding extra information.-->
+        <summary>When did tacos first appear in the United States?</summary>
+        <p>Tacos first appeared in 1906.</p>
+      </details>
+    </section>
+    <hr />
+    <article id="menu">
+      <h2>Our Menu</h2>
+      <table>
+        <caption>
+          Our Tacos
+        </caption>
+        <thead>
+          <tr>
+            <th>Tacos</th>
+            <th scope="col"><abbr title="Quantity">Qty</abbr></th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">Crunchy</th>
+            <td>1</td>
+            <td>$1.50</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>$2.50</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>$3.25</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="3">Soft</th>
+            <td>1</td>
+            <td>$2.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>$3.50</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>$4.50</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Chips &amp; Salsa $2</td>
+          </tr>
+        </tfoot>
+      </table>
+      <br />
+      <p>
+        <a href="#">Back To Top</a>
+      </p>
+    </article>
+    <hr />
+    <footer>
+      <!--html semantic tag-->
+      <p>Copyright&copy; The Little Taco Shop</p>
+    </footer>
+
+<script>
+document.querySelector('.menu-btn').addEventListener('click', () => {
+  document.querySelector('.mobile-nav').classList.toggle('open');
+});
+</script>
+ 
+
+</body>
+
+</html>
+
+  
