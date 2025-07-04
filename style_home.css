@@ -1,43 +1,56 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-
-
-body{
-    
-    margin:10px;    
-    border: 2px dashed red;
-    padding: 20px;
-    box-sizing: border-box;
+body {
+  margin: 10px;
+  border: 2px dashed red;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-img{
+img {
+  /*If you want an image to fit inside the page padding and resize nicely as the screen size changes (like on phones, tablets, and desktops)*/
 
-    /*If you want an image to fit inside the page padding and resize nicely as the screen size changes (like on phones, tablets, and desktops)*/
+  position: relative;
+  bottom: -25px;
+  max-width: 100%; /* Image will never be wider than the container */
+  height: auto; /* Keeps the image's aspect ratio */
 
-    
-    position: relative;
-    bottom: -25px;
-    max-width: 100%;   /* Image will never be wider than the container */
-    height: auto;      /* Keeps the image's aspect ratio */
-    
-    box-sizing: border-box; /* Makes padding & borders not increase size (optional, but helpful) */
+  box-sizing: border-box; /* Makes padding & borders not increase size (optional, but helpful) */
 }
 
+h1 {
+  /*Element selector*/
 
-h1{ /*Element selector*/
-    
-    text-align: center;      /* Center the text */
-   
+  text-align: center; /* Center the text */
+}
+
+/*04 July 2025*/
+.menu-btn {
+  position: fixed; /* Keep the button in the same spot on the screen, even when scrolling */
+  top: 70px; /* Push the button 70px down from the top of the screen */
+  right: 20px; /* Push the button 20px in from the right side of the screen */
+
+  font-size: 2rem; /* Make the button text larger (2 times the base font size) */
+  padding: 10px 12px; /* Add space inside the button: 10px top/bottom, 12px left/right */
+
+  background: rgb(230, 233, 235); /* background color */
+  color: black; /* Set the text color to black */
+
+  border: none; /* Remove the default border */
+  border-radius: 5px; /* Slightly round the corners of the button */
+}
+
+/* Blur class to be toggled on page content */
+.blurred {
+  filter: blur(10px); /* Apply the blur */
+  transition: filter 0.3s ease; /* Smooth blur transition */
 }

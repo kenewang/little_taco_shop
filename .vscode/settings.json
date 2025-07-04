@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "files.autoSave": "off",
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.formatOnSave.enabled": true,
+  "html.format.enable": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.indentHandlebars": true,
+  "xmlTools.xmlFormatterImplementation": "v2"
+}
