@@ -35,9 +35,20 @@ h1 {
 
 /*04 July 2025*/
 .menu-btn {
-  position: fixed; /* Keep the button in the same spot on the screen, even when scrolling */
+  position: absolute; /* 
+  
+  Absolute positioning allows an element to be positioned relative to its nearest positioned ancestor. 
+
+  When you apply position: absolute; to an element, it will look up the DOM tree to find its nearest ancestor that is also positioned (i.e., has position: relative, absolute, etc.). 
+  
+  If it doesn't find any, it will default to being positioned relative to the <html> element (i.e., the entire page).
+  
+  --say that you want to place a sticky note on the whiteboard, if the whiteboard is the sticky note's parent and is positioned, then the note sticks on the whiteboard. 
+  --If there is not whiteboard then the sticky note sticks to the wall.
+  */
+
   top: 70px; /* Push the button 70px down from the top of the screen */
-  right: 20px; /* Push the button 20px in from the right side of the screen */
+  right: 35px; /* Push the button 20px in from the right side of the screen */
 
   font-size: 2rem; /* Make the button text larger (2 times the base font size) */
   padding: 10px 12px; /* Add space inside the button: 10px top/bottom, 12px left/right */
@@ -47,6 +58,7 @@ h1 {
 
   border: none; /* Remove the default border */
   border-radius: 5px; /* Slightly round the corners of the button */
+  z-index: 1;
 }
 
 /* Blur class to be toggled on page content */
