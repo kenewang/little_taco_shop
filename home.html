@@ -23,27 +23,28 @@
 
   <body>
     <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav class="nav-menu">
+      <!--semantic html tag called nav-->
+      <!--Semantic HTML means using HTML tags that clearly describe their meaning and purpose-->
+
+      <ul>
+        <!--unordered list start tag-->
+        <!-- the "<ul>" tag when it wraps list elements — it indents them a little to the right-->
+        <li>
+          <!--list tag-->
+
+          <!--"<a>" is an anchor tag-->
+          <!--We use anchor tag to create absolute or relative links-->
+        </li>
+
+        <li><a href="hours.html">Store Hours</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <!--the above are relative links because they exist on our server or same directory as website code-->
+      </ul>
+    </nav>
     <div class="page-content">
       <h1>Welcome to Little Taco Shop</h1>
-      <nav>
-        <!--semantic html tag called nav-->
-        <!--Semantic HTML means using HTML tags that clearly describe their meaning and purpose-->
 
-        <ul>
-          <!--unordered list start tag-->
-          <!-- the "<ul>" tag when it wraps list elements — it indents them a little to the right-->
-          <li>
-            <!--list tag-->
-            <a href="#about">About LTS</a>
-            <!--"<a>" is an anchor tag-->
-            <!--We use anchor tag to create absolute or relative links-->
-          </li>
-          <li><a href="#menu">Our Menu</a></li>
-          <li><a href="hours.html">Store Hours</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <!--the above are relative links because they exist on our server or same directory as website code-->
-        </ul>
-      </nav>
       <section>
         <!--another html semantic tag-->
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -84,7 +85,7 @@
         </details>
       </section>
       <hr />
-      <article id="menu">
+      <article>
         <h2>Our Menu</h2>
         <table>
           <caption>
@@ -146,9 +147,11 @@
     <script>
       const menuBtn = document.querySelector(".menu-btn");
       const content = document.querySelector(".page-content");
+      const navMenu = document.querySelector(".nav-menu");
 
       menuBtn.addEventListener("click", () => {
         content.classList.toggle("blurred");
+        navMenu.classList.toggle("show");
       });
     </script>
   </body>

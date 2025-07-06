@@ -58,11 +58,53 @@ h1 {
 
   border: none; /* Remove the default border */
   border-radius: 5px; /* Slightly round the corners of the button */
+
   z-index: 1;
 }
+/*imagine your web page as a stack of paper. Each element (button, image, etc) is like a sheet of paper. 
+  z-index is the stacking order. The higher the number, the closer to you (on top) it appears.
+
 
 /* Blur class to be toggled on page content */
 .blurred {
   filter: blur(10px); /* Apply the blur */
-  transition: filter 0.3s ease; /* Smooth blur transition */
+  transition: filter 0.4s ease; /* Smooth blur transition */
+}
+
+/*06 July 2025*/
+/* Navigation menu hidden by default */
+.nav-menu {
+  display: none; /* Hidden initially */
+  position: absolute;
+  top: 20px; /* Distance from top of page */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Truly center it */
+  z-index: 2; /* On top of everything else */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px; /* Increased padding */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-menu li {
+  margin: 15px 0; /*Adds 15 pixels of space above and below each <li> element
+                    and Adds no space to the left or right*/
+}
+
+.nav-menu a {
+  text-decoration: double;
+  color: black;
+  font-size: 1.3rem;
+}
+
+/* When menu is active */
+.nav-menu.show {
+  display: block;
 }
