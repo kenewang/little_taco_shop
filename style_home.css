@@ -8,6 +8,7 @@ body {
   border: 2px dashed red;
   padding: 20px;
   box-sizing: border-box;
+  font-family: TW Cen MT;
 }
 
 *,
@@ -53,8 +54,9 @@ h1 {
   font-size: 2rem; /* Make the button text larger (2 times the base font size) */
   padding: 10px 12px; /* Add space inside the button: 10px top/bottom, 12px left/right */
 
-  background: rgb(230, 233, 235); /* background color */
+  background: rgb(243, 246, 248); /* background color */
   color: black; /* Set the text color to black */
+  box-shadow: azure;
 
   border: none; /* Remove the default border */
   border-radius: 5px; /* Slightly round the corners of the button */
@@ -107,4 +109,59 @@ h1 {
 /* When menu is active */
 .nav-menu.show {
   display: block;
+}
+
+/*07 July 2024*/
+.about h2 {
+  text-align: center;
+}
+.about {
+  position: relative;
+  top: 10px;
+}
+
+h2 abbr {
+  text-decoration: none;
+}
+
+.history {
+  text-align: justify;
+}
+
+.below-image {
+  position: relative; /*Relative positioning allows you to move an element relative to where it would normally be on the page*/
+  top: 10px;
+
+  /*This means "below-image" starts at its normal spot and moved 10 pixels from the top*/
+}
+
+.details {
+  position: relative;
+  top: 10px;
+}
+.details summary,
+p {
+  position: relative;
+  top: 10px;
+}
+
+article h2 {
+  position: relative;
+  top: 20px;
+}
+table {
+  position: relative;
+  top: 20px;
+}
+.above-table {
+  position: relative;
+  top: 20px;
+}
+.above-footer {
+  position: relative;
+  bottom: 10px;
+}
+.footer-text a {
+  text-decoration: none; /*remove the underline below the text caused by the anchor tag*/
+  color: black; /*remove the bluish color caused by the link tag*/
 }
