@@ -9,6 +9,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   font-family: TW Cen MT;
+  background-color: goldenrod;
 }
 
 *,
@@ -28,10 +29,11 @@ img {
   box-sizing: border-box; /* Makes padding & borders not increase size (optional, but helpful) */
 }
 
-h1 {
+.page-content h1 {
   /*Element selector*/
 
   text-align: center; /* Center the text */
+  color: darkred;
 }
 
 /*04 July 2025*/
@@ -54,9 +56,9 @@ h1 {
   font-size: 2rem; /* Make the button text larger (2 times the base font size) */
   padding: 10px 12px; /* Add space inside the button: 10px top/bottom, 12px left/right */
 
-  background: rgb(243, 246, 248); /* background color */
-  color: black; /* Set the text color to black */
-  box-shadow: azure;
+  background: peru; /* background color */
+  color: darkred; /* Set the text color to black */
+  box-shadow: gold;
 
   border: none; /* Remove the default border */
   border-radius: 5px; /* Slightly round the corners of the button */
@@ -82,7 +84,7 @@ h1 {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Truly center it */
   z-index: 2; /* On top of everything else */
-  background: rgba(255, 255, 255, 0.95);
+  background: burlywood;
   padding: 30px 40px; /* Increased padding */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -98,11 +100,12 @@ h1 {
 .nav-menu li {
   margin: 15px 0; /*Adds 15 pixels of space above and below each <li> element
                     and Adds no space to the left or right*/
+  font-weight: bold;
 }
 
 .nav-menu a {
   text-decoration: double;
-  color: black;
+  color: darkred;
   font-size: 1.3rem;
 }
 
@@ -117,15 +120,16 @@ h1 {
 }
 .about {
   position: relative;
-  top: 10px;
-}
-
-h2 abbr {
-  text-decoration: none;
+  top: 15px;
+  color: darkred;
 }
 
 .history {
+  position: relative;
+  top: 5px;
   text-align: justify;
+  color: darkred;
+  font-weight: 500;
 }
 
 .below-image {
@@ -133,35 +137,107 @@ h2 abbr {
   top: 10px;
 
   /*This means "below-image" starts at its normal spot and moved 10 pixels from the top*/
+  border-color: darkred;
 }
 
-.details {
+details {
   position: relative;
   top: 10px;
+
+  padding: 0.8rem 1rem;
+
+  overflow: hidden;
 }
-.details summary,
-p {
+details summary {
   position: relative;
   top: 10px;
+  list-style-position: outside; /*Cuuses text inside the summary tag to start on the same indentation*/
+  color: darkred;
 }
 
+details > p {
+  /*space between the summary and the paragraph all inside the details element*/
+  padding-block: 0.7rem;
+  color: darkred;
+}
+
+details p {
+  font-weight: 700;
+}
 article h2 {
   position: relative;
-  top: 20px;
+  top: 30px;
+  color: darkred;
 }
 table {
   position: relative;
-  top: 20px;
+  top: 30px;
 }
 .above-table {
   position: relative;
-  top: 20px;
+  top: 30px;
+  border-color: darkred;
 }
-.above-footer {
-  position: relative;
-  bottom: 10px;
-}
+
 .footer-text a {
   text-decoration: none; /*remove the underline below the text caused by the anchor tag*/
   color: black; /*remove the bluish color caused by the link tag*/
+  position: relative;
+  top: 15px;
+  color: darkred;
+}
+
+.above-footer {
+  position: relative;
+  top: 15px;
+  border-color: darkred;
+}
+
+footer p {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  color: darkred;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+caption {
+  caption-side: top;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+
+  text-align: center;
+  color: darkred;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid darkred;
+  color: darkred;
+}
+
+tbody th,
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid darkred;
+  color: darkred;
+}
+
+tbody th {
+  text-align: left;
+  vertical-align: top;
+  color: darkred;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
 }
