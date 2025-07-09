@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: TW Cen MT;
   background-color: goldenrod;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -27,6 +28,7 @@ img {
   height: auto; /* Keeps the image's aspect ratio */
 
   box-sizing: border-box; /* Makes padding & borders not increase size (optional, but helpful) */
+  border: outset;
 }
 
 .page-content h1 {
@@ -54,15 +56,17 @@ img {
   right: 35px; /* Push the button 20px in from the right side of the screen */
 
   font-size: 2rem; /* Make the button text larger (2 times the base font size) */
-  padding: 10px 12px; /* Add space inside the button: 10px top/bottom, 12px left/right */
+  padding: 5px 5px; /* Add space inside the button: 10px top/bottom, 12px left/right */
 
-  background: peru; /* background color */
+  background: khaki; /* background color */
   color: darkred; /* Set the text color to black */
   box-shadow: gold;
 
-  border: none; /* Remove the default border */
-  border-radius: 5px; /* Slightly round the corners of the button */
-
+  border: outset; /* Remove the default border */
+  border-radius: 0px; /* Slightly round the corners of the button */
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
   z-index: 1;
 }
 /*imagine your web page as a stack of paper. Each element (button, image, etc) is like a sheet of paper. 
@@ -84,9 +88,9 @@ img {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Truly center it */
   z-index: 2; /* On top of everything else */
-  background: burlywood;
+  background: khaki;
   padding: 30px 40px; /* Increased padding */
-  border-radius: 8px;
+  border-radius: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -151,19 +155,17 @@ details {
 details summary {
   position: relative;
   top: 10px;
-  list-style-position: outside; /*Cuuses text inside the summary tag to start on the same indentation*/
-  color: darkred;
-}
-
-details > p {
-  /*space between the summary and the paragraph all inside the details element*/
-  padding-block: 0.7rem;
+  list-style-position: outside; /*Causes text inside the summary tag to start on the same indentation*/
   color: darkred;
 }
 
 details p {
+  /*space between the summary and the paragraph all inside the details element*/
+  padding-block: 0.7rem;
+  color: darkred;
   font-weight: 700;
 }
+
 article h2 {
   position: relative;
   top: 30px;
@@ -172,6 +174,7 @@ article h2 {
 table {
   position: relative;
   top: 30px;
+  background-color: rgb(249, 249, 119);
 }
 .above-table {
   position: relative;
@@ -227,17 +230,57 @@ thead th {
 tbody th,
 tbody td {
   padding: 12px;
-  border-bottom: 1px solid darkred;
+  border-bottom: 2px solid darkred;
   color: darkred;
 }
 
 tbody th {
   text-align: left;
   vertical-align: top;
+  border-bottom: 2px solid darkred;
   color: darkred;
 }
 
 abbr[title] {
   text-decoration: underline dotted;
   cursor: help;
+}
+
+/* 09 jULY 2025 */
+/* Style the clickable span like a link or button */
+.open-modal {
+  color: darkred;
+  text-decoration: underline dotted;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* The modal container */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: khaki;
+  padding: 20px;
+  border-radius: 0px;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Close (X) button */
+.close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
 }
