@@ -284,3 +284,37 @@ abbr[title] {
   float: right;
   font-size: 1.5rem;
 }
+
+/* 10 July 2025 */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Your tablet-specific styles go here */
+
+  body {
+    height: 100%;
+    margin: 50px 50px;
+  }
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .page-content {
+    flex: 1;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: darkred;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop-specific styles go here */
+  body {
+    margin: 20px 60px;
+  }
+}
