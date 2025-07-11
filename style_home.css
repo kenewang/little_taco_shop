@@ -19,11 +19,32 @@ body {
   box-sizing: inherit;
 }
 
+h1 {
+  /*Element selector*/
+
+  text-align: center; /* Center the text */
+  color: darkred;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+h2 {
+  /*Element selector*/
+
+  text-align: left justify; /* Center the text */
+  color: darkred;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
 img {
   /*If you want an image to fit inside the page padding and resize nicely as the screen size changes (like on phones, tablets, and desktops)*/
 
   position: relative;
-  bottom: -25px;
+  bottom: 25%;
   max-width: 100%; /* Image will never be wider than the container */
   height: auto; /* Keeps the image's aspect ratio */
 
@@ -31,16 +52,9 @@ img {
   border: outset;
 }
 
-.page-content h1 {
-  /*Element selector*/
-
-  text-align: center; /* Center the text */
-  color: darkred;
-}
-
 /*04 July 2025*/
 .menu-btn {
-  position: absolute; /* 
+  position: relative; /* 
   
   Absolute positioning allows an element to be positioned relative to its nearest positioned ancestor. 
 
@@ -52,9 +66,6 @@ img {
   --If there is not whiteboard then the sticky note sticks to the wall.
   */
 
-  top: 70px; /* Push the button 70px down from the top of the screen */
-  right: 35px; /* Push the button 20px in from the right side of the screen */
-
   font-size: 2rem; /* Make the button text larger (2 times the base font size) */
   padding: 5px 5px; /* Add space inside the button: 10px top/bottom, 12px left/right */
 
@@ -64,9 +75,12 @@ img {
 
   border: outset; /* Remove the default border */
   border-radius: 0px; /* Slightly round the corners of the button */
+  width: auto;
   max-width: 100%;
-  height: auto;
   box-sizing: border-box;
+  margin-left: auto;
+  display: block;
+
   z-index: 1;
 }
 /*imagine your web page as a stack of paper. Each element (button, image, etc) is like a sheet of paper. 
@@ -171,14 +185,23 @@ article h2 {
   top: 30px;
   color: darkred;
 }
-table {
-  position: relative;
-  top: 30px;
-  background-color: rgb(249, 249, 119);
+
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
 }
+
+table {
+  background-color: rgb(249, 249, 119);
+  width: 100%; /* Fill the container */
+  max-width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
 .above-table {
   position: relative;
-  top: 30px;
+  top: 10px;
   border-color: darkred;
 }
 
@@ -203,21 +226,16 @@ footer p {
   color: darkred;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
 caption {
-  caption-side: top;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 12px;
-
+  margin-top: 30px;
   text-align: center;
   color: darkred;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
 }
 
 thead th {
@@ -287,12 +305,36 @@ abbr[title] {
 
 /* 10 July 2025 */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 500px) and (max-width: 1023px) {
   /* Your tablet-specific styles go here */
 
   body {
     height: 100%;
-    margin: 50px 50px;
+    margin: 30px 50px;
+  }
+
+  .nav-menu {
+    display: block; /* Always visible */
+    position: static; /* Let it flow naturally in the page */
+    background: transparent; /* Remove mobile overlay look */
+
+    box-shadow: none;
+    margin-bottom: 40px; /* Space below menu */
+  }
+
+  .nav-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between items */
+    left: 40px;
+  }
+
+  .nav-menu li {
+    margin: 0; /* Remove vertical spacing */
+  }
+
+  .menu-btn {
+    display: none;
   }
 
   .page-wrapper {
@@ -310,11 +352,29 @@ abbr[title] {
     padding: 1rem;
     color: darkred;
   }
+
+  figure img {
+    width: 90%; /* expand it outward */
+    max-width: 700px; /* limit its size on big screens */
+    height: auto; /* keeps the natural shape */
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
 }
 
 @media (min-width: 1024px) {
   /* Desktop-specific styles go here */
   body {
     margin: 20px 60px;
+  }
+
+  figure img {
+    width: 90%; /* expand it outward */
+    max-width: 700px; /* limit its size on big screens */
+    height: auto; /* keeps the natural shape */
+    display: block;
+    margin: 0 auto;
+    border: none;
   }
 }
