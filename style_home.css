@@ -332,6 +332,7 @@ abbr[title] {
     margin: 0;
     background: transparent;
     box-shadow: none;
+    margin-top: 0.6rem;
   }
 
   h1 {
@@ -344,12 +345,16 @@ abbr[title] {
     height: auto;
     box-sizing: border-box;
     font-size: 3rem;
+    padding-bottom: 10px;
   }
   .nav-menu ul {
     list-style-type: none;
     padding: 0;
 
     text-align: right;
+    margin: 0 auto;
+    min-width: 0 auto;
+    max-width: 800px;
 
     background-color: transparent;
   }
@@ -360,8 +365,9 @@ abbr[title] {
     display: inline-block;
     margin-inline: 0.5rem;
     padding: 0;
-    padding-right: 2rem;
-    margin: 0.2rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+
     background-color: transparent;
   }
 
@@ -373,6 +379,11 @@ abbr[title] {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 800px;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    margin: 0 auto;
+    padding: 0 0.1rem;
   }
 
   .page-content {
@@ -415,10 +426,10 @@ abbr[title] {
 
   .nav-menu {
     display: inline;
-    width: 98vw;
+    width: 800px;
     padding: 0;
-    background: white;
-    margin: 0;
+
+    margin-top: 0.5rem;
     background: transparent;
     box-shadow: none;
   }
@@ -433,6 +444,8 @@ abbr[title] {
     height: auto;
     box-sizing: border-box;
     font-size: 3rem;
+    padding-bottom: 10px;
+    box-shadow: black;
   }
   .nav-menu ul {
     list-style-type: none;
@@ -449,7 +462,7 @@ abbr[title] {
     display: inline-block;
     margin-inline: 0.5rem;
     padding: 0;
-    padding-right: 2rem;
+    padding-right: 1rem;
     margin: 0.2rem;
     background-color: transparent;
   }
@@ -462,6 +475,12 @@ abbr[title] {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 800px;
+    border-right: 1px solid darkred;
+    border-left: 1px solid darkred;
+
+    margin: 0 auto;
+    padding: 0 0.1rem;
   }
 
   .page-content {
